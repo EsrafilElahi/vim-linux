@@ -1,6 +1,10 @@
-copy the selected text in terminal : ctrl+shift+c
-pase the text into terminal : ctrl+shift+v
+ctrl+shift+c : copy the selected text in terminal
+ctrl+shift+v : pase the text into terminal
 
-search the history commands : ctrl+r
-find the text into terminal : ctrl+f
+ctrl+r : search the history commands
+ctrl+f : find the text into terminal
+
+ls : Lists all files and directories in the present working directory
+ls -a : Lists all files and directories in the present working directory with hidden fils and folders
+l : Lists all files and directories in the present working directory (indicates that which is folder and which is file)
 
