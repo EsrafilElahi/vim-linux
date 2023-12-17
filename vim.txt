@@ -1,0 +1,42 @@
+w, e ---> jump to next word
+b ---> jump to before word
+
+
+u ---> undo
+ctrl + r ---> redo
+
+:q ---> quite
+:wq ---> write and quite
+:q! ---> ignore edits and force quite
+
+{, } ---> jump by paragraph
+
+^ ---> jump to begginig of line
+0 ---> jump to start line
+$ ---> jump to enf of line
+A ---> jump tp end of line with insert mode
+
+gg ---> jump tp first line
+G ---> jump to last line
+
+r: replace the letter
+
+o ---> new line in bottom
+O ---> new line in top
+
+x ---> delete letter
+dd ---> delete the whole line
+2dd ---> delete 2 lines
+D ---> delete the line after the cursor
+dw ---> delete the word (but cursor must be first letter)
+
+yy ---> copy the line
+yw ---> copy the word
+p ---> paste of bottom
+P ---> paste of top
+
+v ---> visual mode
+
+/search
+n ---> next match
+N ---> prev match
