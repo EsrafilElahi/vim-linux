@@ -8,6 +8,14 @@ ctrl + r ---> redo
 :q ---> quite
 :wq ---> write and quite
 :q! ---> ignore edits and force quite
+:set number ---> set line numbers
+:set autoindent ---> format it
+:colorshema blue ---> change theme
+:colorshema Tab ---> shows all colors
+:Explore ---> shows all folders and files
+:Vexplore ---> a window top created
+:vsplit ---> a window created left
+:!ls ---> run linux commands
 
 {, } ---> jump by paragraph
 
@@ -19,7 +27,8 @@ A ---> jump tp end of line with insert mode
 gg ---> jump tp first line
 G ---> jump to last line
 
-r: replace the letter
+r ---> replace the letter
+a ---> write after the letter in end of line
 
 o ---> new line in bottom
 O ---> new line in top
@@ -29,13 +38,26 @@ dd ---> delete the whole line
 2dd ---> delete 2 lines
 D ---> delete the line after the cursor
 dw ---> delete the word (but cursor must be first letter)
+d$ ---> delete from cursor to end line
+d^ ---> delete from cursor to start line
+
+. ---> repeat (the action)
+for example : delete the word once , and then tap `.`  to repeat that action
 
 yy ---> copy the line
 yw ---> copy the word
 p ---> paste of bottom
 P ---> paste of top
 
+shift + % ---> jump to bracket or pranteses
+
 v ---> visual mode
+v --> goto visual mode ---> it ---> select innerTag of html
+v --> goto visual mode ---> at ---> select alterTag of html
+v --> goto visual mode ---> select the lines  ---> shift + > ---> all selected lines get indent space
+v --> goto visual mode ---> select the lines  ---> shift + < ---> all selected lines back to indent space
+v + gg ---> selecct all passage
+
 
 /search
 n ---> next match
