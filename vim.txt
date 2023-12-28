@@ -9,7 +9,7 @@ ctrl + r ---> redo
 :wq ---> write and quite
 :q! ---> ignore edits and force quite
 :set number ---> set line numbers
-:set autoindent ---> format it
+:set autoindent ---> format it 
 :colorshema blue ---> change theme
 :colorshema Tab ---> shows all colors
 :Explore ---> shows all folders and files
