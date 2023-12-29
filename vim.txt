@@ -17,6 +17,8 @@ ctrl + r ---> redo
 :vsplit ---> a window created left
 :!ls ---> run linux commands
 
+ctrl + n ----> autoComplete
+
 {, } ---> jump by paragraph
 
 ^ ---> jump to begginig of line
