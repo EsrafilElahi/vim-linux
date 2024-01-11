@@ -27,6 +27,9 @@ ctrl + y ----> choose autocomplete
 shift + } ---> jump by paragraph
 shift + { ---> jump by paragraph
 
+shift + > ---> indent right
+shift + < ---> indent left
+
 ^ ---> jump to begginig of line
 0 ---> jump to start line
 $ ---> jump to enf of line
