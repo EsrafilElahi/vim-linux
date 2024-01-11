@@ -68,3 +68,11 @@ v + gg ---> selecct all passage
 /search
 n ---> next match
 N ---> prev match
+
+
+// resize window
+ctrl+w 10+>
+ctrl+w 10+<
+
+ctrl+w 10 + '-'
+ctrl+w 10 + '+'
