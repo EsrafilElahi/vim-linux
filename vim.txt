@@ -72,6 +72,7 @@ v --> goto visual mode ---> select the lines  ---> shift + > ---> all selected l
 v --> goto visual mode ---> select the lines  ---> shift + < ---> all selected lines back to indent space
 v + gg ---> selecct all passage
 
+ctrl+# ---> find similar word
 
 /search
 n ---> next match
