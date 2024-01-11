@@ -30,6 +30,7 @@ $ ---> jump to enf of line
 A ---> jump tp end of line with insert mode
 
 gg ---> jump tp first line
+v ----> visual mode
 G ---> jump to last line
 
 r ---> replace the letter
