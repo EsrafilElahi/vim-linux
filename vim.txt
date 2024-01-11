@@ -45,6 +45,8 @@ a ---> write after the letter in end of line
 o ---> new line in bottom
 O ---> new line in top
 
+gg=G ---> format the entire codes
+
 x ---> delete letter
 dd ---> delete the whole line
 2dd ---> delete 2 lines
