@@ -24,8 +24,8 @@ ctrl + n ----> choose next
 ctrl + p ----> choose previous
 ctrl + y ----> choose autocomplete
 
-
-{, } ---> jump by paragraph
+shift + } ---> jump by paragraph
+shift + { ---> jump by paragraph
 
 ^ ---> jump to begginig of line
 0 ---> jump to start line
