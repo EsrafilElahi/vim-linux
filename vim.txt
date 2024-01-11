@@ -77,6 +77,7 @@ v + gg ---> selecct all passage
 n ---> next match
 N ---> prev match
 
+copy all selected text ---> gg v G + yy
 
 // resize window
 ctrl+w 10+>  ----> increase left/right selected window size
