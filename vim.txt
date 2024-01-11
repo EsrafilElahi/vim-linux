@@ -2,6 +2,9 @@ w, e ---> jump to next word
 b ---> jump to before word
 
 
+10 + left/right  ---> go left/right 10 step
+10 + up/down  ---> go up/down 10 step
+
 u ---> undo
 ctrl + r ---> redo
 
