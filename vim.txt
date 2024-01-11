@@ -17,7 +17,10 @@ ctrl + r ---> redo
 :vsplit ---> a window created left
 :!ls ---> run linux commands
 
-ctrl + n ----> autoComplete
+ctrl + n ----> choose next
+ctrl + p ----> choose previous
+ctrl + y ----> choose autocomplete
+
 
 {, } ---> jump by paragraph
 
