@@ -1,6 +1,19 @@
 " Set background color to dark
 set background=dark
 
+" Map Ctrl+G to go to a specific line
+nnoremap <C-L> :call GotoLine()<CR>
+
+" Function to prompt for line number and jump to it
+function! GotoLine()
+    let lnum = input('Go to line: ')
+    execute 'normal! ' . lnum . 'G'
+endfunction
+
+" Map \g to go to a specific line
+nnoremap <Leader>l :call GotoLine()<CR>
+
+
 " Set text color
 " highlight Normal guifg=Green ctermfg=Green
 
@@ -54,7 +67,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" List of plugins
 call plug#begin('~/.vim/plugged')
   " Add your desired plugins here
   Plug 'scrooloose/nerdtree'
