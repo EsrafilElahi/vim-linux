@@ -71,8 +71,8 @@ N ---> prev match
 
 
 // resize window
-ctrl+w 10+>
-ctrl+w 10+<
+ctrl+w 10+>  ----> increase left/right selected window size
+ctrl+w 10+<  ----> decrease left/right selected window size
 
-ctrl+w 10 + '-'
-ctrl+w 10 + '+'
+ctrl+w 10 + '-'  ----> increase up/down selected window size
+ctrl+w 10 + '+'  ----> decrease up/down selected window size
