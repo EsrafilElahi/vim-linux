@@ -48,6 +48,26 @@ set expandtab
 filetype plugin indent on
 filetype plugin on
 
+" Enable autocompletion
+set wildmenu
+set wildmode=list:longest
+
+" Set dictionary for keyword completion
+set dictionary+=/path/to/your/dictionary/file
+
+" Enable file path completion
+set path+=/path/to/your/project/**
+
+" Enable omni-completion
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
+" Enable line and column numbers in the status line
+set ruler
+
+
+
+
+
 " NERDTree settings
 nnoremap <C-]> :NERDTreeToggle<CR>
 let g:NERDTreeShowHidden = 1
@@ -60,12 +80,13 @@ let g:airline#extensions#tabline#enabled = 1
 " Auto-close HTML and XML tags
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
-" Install and configure vim-plug for plugin management
+
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
 
 call plug#begin('~/.vim/plugged')
   " Add your desired plugins here
@@ -73,6 +94,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'jiangmiao/auto-pairs'
   Plug 'alvan/vim-closetag'
+  Plug 'preservim/nerdcommenter'
+  Plug 'mxw/vim-jsx'
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
+  Plug 'ternjs/tern_for_vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
   " Add more plugins as needed
 call plug#end()
 
