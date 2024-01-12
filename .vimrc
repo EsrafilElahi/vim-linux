@@ -64,10 +64,6 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 " Enable line and column numbers in the status line
 set ruler
 
-
-
-
-
 " NERDTree settings
 nnoremap <C-]> :NERDTreeToggle<CR>
 let g:NERDTreeShowHidden = 1
@@ -88,9 +84,23 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 
+
+" Set up an autocommand to trigger AutoSave every minute (adjust as needed)
+autocmd BufWritePost * call AutoSave()
+
+" Enable auto-save
+let g:auto_save = 1
+
+augroup ft_markdown
+  au!
+  au FileType markdown let b:auto_save = 1
+augroup END
+
+
 call plug#begin('~/.vim/plugged')
   " Add your desired plugins here
   Plug 'scrooloose/nerdtree'
+  Plug '907th/vim-auto-save'
   Plug 'vim-airline/vim-airline'
   Plug 'jiangmiao/auto-pairs'
   Plug 'alvan/vim-closetag'
