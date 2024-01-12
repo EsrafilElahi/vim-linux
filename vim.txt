@@ -28,6 +28,9 @@ ctrl + y ----> choose autocomplete
 shift + } ---> jump by paragraph
 shift + { ---> jump by paragraph
 
+shift + ( ---> jump to first letter of page
+shift + ) ---> jump to last letter of page
+
 shift + > ---> indent right
 shift + < ---> indent left
 
