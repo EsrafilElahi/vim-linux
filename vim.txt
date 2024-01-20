@@ -77,6 +77,7 @@ v --> goto visual mode ---> select the lines  ---> shift + < ---> all selected l
 v + gg ---> selecct all passage
 
 ctrl+# ---> find similar word
+?span  ---> find all span word
 
 /search
 n ---> next match
