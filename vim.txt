@@ -51,6 +51,8 @@ O ---> new line in top
 
 gg=G ---> format the entire codes
 
+gd ---> goto function refrence
+
 x ---> delete letter
 dd ---> delete the whole line
 2dd ---> delete 2 lines
