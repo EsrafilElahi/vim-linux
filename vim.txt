@@ -83,6 +83,8 @@ ctrl+# ---> find similar word
 n ---> next match
 N ---> prev match
 
+:find **/folderName/index.tsx  ---> find the specific file
+
 copy all selected text ---> gg v G + yy
 
 // resize window
