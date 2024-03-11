@@ -17,7 +17,7 @@ yw ---> copy the word
 :colorshema blue ---> change theme
 :colorshema Tab ---> shows all colors
 :Explore ---> shows all folders and files
-:Vexplore ---> a window top created
+:Vexplore ---> a window top created 
 :vsplit ---> a window created left
 :!ls ---> run linux commands
 
