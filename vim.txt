@@ -13,7 +13,7 @@ ctrl + r ---> redo
 
 yw ---> copy the word
 
-set noswapfile
+set noswapfile  ---> to disable create .swp files when files changes in vim
 
 :q ---> quite
 :wq ---> write and quite
