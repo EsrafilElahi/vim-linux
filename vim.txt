@@ -15,6 +15,12 @@ yw ---> copy the word
 
 ctrl + ] ---> toggle NERDTree
 
+change a word with another word here :
+Place the cursor anywhere on the word "Fox"
+Press 'ciw'
+Type "cat"
+Press <Esc>
+
 set noswapfile  ---> to disable create .swp files when files changes in vim
 
 :q ---> quite
