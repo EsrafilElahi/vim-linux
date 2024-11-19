@@ -13,6 +13,8 @@ ctrl + r ---> redo
 
 yw ---> copy the word
 
+ctrl + ] ---> toggle NERDTree
+
 set noswapfile  ---> to disable create .swp files when files changes in vim
 
 :q ---> quite
