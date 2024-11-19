@@ -7,6 +7,10 @@ b ---> jump to before word
 u ---> undo
 ctrl + r ---> redo
 
+:find package.json ---> find file in project
+:find **/*events ---> find with path and name
+:find pack<tab> ---> to autoComplete
+
 yw ---> copy the word
 
 :q ---> quite
