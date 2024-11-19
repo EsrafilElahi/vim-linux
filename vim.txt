@@ -24,6 +24,11 @@ Press 'ciw'
 Type "cat"
 Press <Esc>
 
+:vimgrep /TODO/ **/*.tsx ---> search content in accross all project files with path
+:copen ---> open all found match text with all files
+:cn ---> go to next match
+:cp ---> go to previous match
+
 or with visual mode :
 Move the cursor to the word.
 Press v to enter visual mode.
