@@ -21,6 +21,13 @@ Press 'ciw'
 Type "cat"
 Press <Esc>
 
+or with visual mode :
+Move the cursor to the word.
+Press v to enter visual mode.
+Press e or b to extend the selection to the end of the word or start of word.
+Press c to change the word.
+Type the new word and press <Esc>
+
 set noswapfile  ---> to disable create .swp files when files changes in vim
 
 :q ---> quite
