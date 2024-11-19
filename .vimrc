@@ -65,6 +65,7 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 set ruler
 
 " NERDTree settings
+nnoremap <C-p> :Files<CR>
 nnoremap <C-]> :NERDTreeToggle<CR>
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeIgnore = ['\.pyc$', '\~$', '\.swp$', '\.swo$', '\.git$']
