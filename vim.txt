@@ -27,6 +27,7 @@ set noswapfile
 :vsplit ---> a window created left
 :!ls ---> run linux commands
 
+ctrl + p ----> search file in project
 ctrl + n ----> choose next
 ctrl + p ----> choose previous
 ctrl + y ----> choose autocomplete
