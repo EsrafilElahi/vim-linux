@@ -30,6 +30,9 @@ set noswapfile  ---> to disable create .swp files when files changes in vim
 :!ls ---> run linux commands
 
 ctrl+w+up | ctrl+w+down | ctrl+w+left | ctrl+w+right ---> change window
+Ctrl+W, s for horizontal splitting
+Ctrl+W, v (lower case) for vertical splitting
+Ctrl+W, q (lower case) to close one
 
 ctrl + p ----> search file in project
 ctrl + n ----> choose next
