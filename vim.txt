@@ -13,6 +13,8 @@ ctrl + r ---> redo
 
 yw ---> copy the word
 
+set noswapfile
+
 :q ---> quite
 :wq ---> write and quite
 :q! ---> ignore edits and force quite
