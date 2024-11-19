@@ -13,6 +13,8 @@ ctrl + r ---> redo
 
 yw ---> copy the word
 
+viw ---> select the word , even from middle of word or start of word or end of word
+
 ctrl + ] ---> toggle NERDTree
 
 change a word with another word here :
