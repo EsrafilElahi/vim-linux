@@ -30,6 +30,16 @@ Type the new word and press <Esc>
 
 set noswapfile  ---> to disable create .swp files when files changes in vim
 
+:%s/const/let/g ---> change all "const" word to "let" word
+:%s/import/noImport/gc ---> asks you to replace all, one-by-one (yes, no), q
+y: Replace this occurrence.
+n: Skip this occurrence.
+a: Replace all remaining occurrences without asking.
+q: Quit the replacement process.
+l: Replace this occurrence and quit.
+^E: Scroll up to see more context.
+^Y: Scroll down to see more context.
+
 :q ---> quite
 :wq ---> write and quite
 :q! ---> ignore edits and force quite
