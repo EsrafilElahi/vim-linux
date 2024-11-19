@@ -39,6 +39,8 @@ set hlsearch
 set ignorecase
 set smartcase
 
+ctrl+^ ---> go to prev tab
+
 " Set tab settings
 set tabstop=2
 set shiftwidth=2
