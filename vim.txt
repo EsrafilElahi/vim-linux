@@ -28,6 +28,7 @@ ctrl + y ---> scroll up
 ===== jump definition =====
 nnoremap gd :YcmCompleter GoTo<CR>
 nnoremap gd :call CocActionAsync('jumpDefinition')<CR>
+ctrl + ^ ---> switch inner tabs
 
 viw ---> select word
 c ---> change the word and type new character
