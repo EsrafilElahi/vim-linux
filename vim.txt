@@ -97,6 +97,8 @@ gg ---> jump tp first line
 v ----> visual mode
 G ---> jump to last line
 
+33G ---> go to line 33
+
 r ---> replace the letter
 a ---> write after the letter in end of line
 
