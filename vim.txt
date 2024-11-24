@@ -5,6 +5,7 @@ b ---> jump to before word
 10 + up/down  ---> go up/down 10 step
 
 u ---> undo
+10u ---> 10 times undo
 ctrl + r ---> redo
 
 :find package.json ---> find file in project
