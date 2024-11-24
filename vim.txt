@@ -25,6 +25,10 @@ p ---> paste it
 ctrl + e ---> scroll down
 ctrl + y ---> scroll up
 
+===== jump definition =====
+nnoremap gd :YcmCompleter GoTo<CR>
+nnoremap gd :call CocActionAsync('jumpDefinition')<CR>
+
 viw ---> select word
 c ---> change the word and type new character
 (ciw ---> viw and c ---> together command = ciw)
