@@ -24,6 +24,7 @@ p ---> paste it
 
 viw ---> select word
 c ---> change the word and type new character
+(ciw ---> viw and c ---> together command = ciw)
 
 ctrl + ] ---> toggle NERDTree
 
