@@ -13,7 +13,6 @@ endfunction
 " Map \g to go to a specific line
 nnoremap <Leader>l :call GotoLine()<CR>
 
-
 " Set text color
 " highlight Normal guifg=Green ctermfg=Green
 
@@ -64,7 +63,7 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 " Enable line and column numbers in the status line
 set ruler
 
-" NERDTree settings
+" NERDTree settings (updated mappings)
 nnoremap <C-p> :Files<CR>
 nnoremap <C-]> :NERDTreeFind<CR>
 nnoremap <C-[> :NERDTreeToggle<CR>
@@ -72,6 +71,7 @@ nnoremap gd :YcmCompleter GoTo<CR>
 nnoremap gd :call CocActionAsync('jumpDefinition')<CR>
 nnoremap <Leader>u:s/^#//<CR>
 vnoremap <Leader>u:s/^#//<CR>gv
+
 " Map Git commands for quick access
 nnoremap <Leader>gs :G<CR>
 nnoremap <Leader>gc :Gcommit<CR>
@@ -88,16 +88,13 @@ let g:airline#extensions#tabline#enabled = 1
 " Auto-close HTML and XML tags
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 
-
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-
-
-" Set up an autocommand to trigger AutoSave every minute (adjust as needed)
+" Set up an autocommand to trigger AutoSave every minute
 autocmd BufWritePost * call AutoSave()
 
 " Enable auto-save
@@ -109,6 +106,30 @@ augroup ft_markdown
 augroup END
 
 set noswapfile
+
+" Session Management
+set sessionoptions+=tabpages,globals
+autocmd VimLeave * mksession! ~/.vim/session.vim
+autocmd VimEnter * nested if argc() == 0 && filereadable('~/.vim/session.vim') | source ~/.vim/session.vim | endif
+
+" NERDCommenter settings
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Allow commenting and inverting empty lines
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1
+
+" Comment shortcuts (Ctrl+/ style)
+nmap <C-_> <plug>NERDCommenterToggle
+vmap <C-_> <plug>NERDCommenterToggle
+" Alternative mapping for terminals that might not send Ctrl+/
+nmap <C-/> <plug>NERDCommenterToggle
+vmap <C-/> <plug>NERDCommenterToggle
 
 call plug#begin('~/.vim/plugged')
   " Add your desired plugins here
@@ -125,7 +146,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'tpope/vim-fugitive'
   
   " Git integration
@@ -135,10 +155,7 @@ call plug#begin('~/.vim/plugged')
   " File explorer with Git integration
   Plug 'preservim/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
-
-  " Add more plugins as needed
 call plug#end()
-
 
 " Gitsigns configuration
 lua << EOF
