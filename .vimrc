@@ -157,7 +157,3 @@ call plug#begin('~/.vim/plugged')
   Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
-" Gitsigns configuration
-lua << EOF
-require('gitsigns').setup {}
-EOF
