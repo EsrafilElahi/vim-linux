@@ -133,7 +133,6 @@ vmap <C-/> <plug>NERDCommenterToggle
 
 call plug#begin('~/.vim/plugged')
   " Add your desired plugins here
-  Plug 'scrooloose/nerdtree'
   Plug '907th/vim-auto-save'
   Plug 'vim-airline/vim-airline'
   Plug 'jiangmiao/auto-pairs'
@@ -156,4 +155,3 @@ call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
-
