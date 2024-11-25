@@ -39,8 +39,6 @@ set hlsearch
 set ignorecase
 set smartcase
 
-ctrl+^ ---> go to prev tab
-
 " Set tab settings
 set tabstop=2
 set shiftwidth=2
@@ -68,7 +66,18 @@ set ruler
 
 " NERDTree settings
 nnoremap <C-p> :Files<CR>
-nnoremap <C-]> :NERDTreeToggle<CR>
+nnoremap <C-]> :NERDTreeFind<CR>
+nnoremap <C-[> :NERDTreeToggle<CR>
+nnoremap gd :YcmCompleter GoTo<CR>
+nnoremap gd :call CocActionAsync('jumpDefinition')<CR>
+nnoremap <Leader>u:s/^#//<CR>
+vnoremap <Leader>u:s/^#//<CR>gv
+" Map Git commands for quick access
+nnoremap <Leader>gs :G<CR>
+nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>gp :Gpush<CR>
+nnoremap <Leader>gl :Gpull<CR>
+
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeIgnore = ['\.pyc$', '\~$', '\.swp$', '\.swo$', '\.git$']
 
@@ -99,6 +108,7 @@ augroup ft_markdown
   au FileType markdown let b:auto_save = 1
 augroup END
 
+set noswapfile
 
 call plug#begin('~/.vim/plugged')
   " Add your desired plugins here
@@ -113,11 +123,24 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'
   Plug 'ternjs/tern_for_vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'tpope/vim-fugitive'
+  
+  " Git integration
+  Plug 'lewis6991/gitsigns.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+
+  " File explorer with Git integration
+  Plug 'preservim/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
 
   " Add more plugins as needed
 call plug#end()
 
 
-
-
-
+" Gitsigns configuration
+lua << EOF
+require('gitsigns').setup {}
+EOF
