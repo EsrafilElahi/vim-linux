@@ -21,6 +21,8 @@ ctrl+^ ---> change inner tab vim
 
 ctrl + / ---> comment code
 
+:vertical resize 50 ---> change the window size when focused
+
 gt ---> go to next buffer
 gT ---> go to prev buffer
 space + w ---> close current tab
