@@ -107,6 +107,17 @@ augroup END
 
 set noswapfile
 
+" Buffer Navigation Settings
+" Enable buffer switching without saving
+set hidden
+
+" Next buffer (gt)
+nnoremap gt :bnext<CR>
+" Previous buffer (gT)
+nnoremap gT :bprevious<CR>
+" Close current buffer/tab (Space + w)
+nnoremap <space>w :bd<CR>
+
 " Session Management
 set sessionoptions+=tabpages,globals
 autocmd VimLeave * mksession! ~/.vim/session.vim
