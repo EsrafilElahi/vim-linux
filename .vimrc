@@ -118,12 +118,29 @@ nnoremap gT :bprevious<CR>
 " Close current buffer/tab (Space + w)
 nnoremap <space>w :bd<CR>
 
-" Session Management
-set sessionoptions+=tabpages,globals
-autocmd VimLeave * mksession! ~/.vim/session.vim
-autocmd VimEnter * nested if argc() == 0 && filereadable('~/.vim/session.vim') | source ~/.vim/session.vim | endif
 
-" NERDCommenter settings
+
+" Session Management
+" Include buffers, windows, tabs, and global variables in sessions
+set sessionoptions+=buffers,windows,tabpages,globals
+" Create session directory if it doesn't exist
+silent !mkdir -p ~/.vim/sessions
+" Auto-save session when leaving Vim
+autocmd VimLeave * execute 'mksession! ~/.vim/sessions/last.vim'
+" Auto-load last session when starting Vim without arguments
+autocmd VimEnter * nested if argc() == 0 && filereadable(expand('~/.vim/sessions/last.vim')) | execute 'source ~/.vim/sessions/last.vim' | endif
+
+" Set leader key to space (more accessible than backslash)
+let mapleader = " "
+
+" Session Management Shortcuts
+" Save session manually
+nnoremap <Leader>ss :mksession! ~/.vim/sessions/last.vim<CR>
+" Load last session with Shift + L + S
+nnoremap <Leader>sl :source ~/.vim/sessions/last.vim<CR>
+nnoremap S :source ~/.vim/sessions/last.vim<CR>
+
+
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
