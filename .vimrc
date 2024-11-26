@@ -1,8 +1,6 @@
 " Set background color to dark
 set background=dark
 
-" Map Ctrl+G to go to a specific line
-nnoremap <C-L> :call GotoLine()<CR>
 
 " Function to prompt for line number and jump to it
 function! GotoLine()
@@ -10,8 +8,8 @@ function! GotoLine()
     execute 'normal! ' . lnum . 'G'
 endfunction
 
-" Map \g to go to a specific line
-nnoremap <Leader>l :call GotoLine()<CR>
+" Map Ctrl+G to go to a specific line
+nnoremap <C-L> :call GotoLine()<CR>
 
 " Set text color
 " highlight Normal guifg=Green ctermfg=Green
@@ -24,9 +22,6 @@ syntax enable
 
 " Enable mouse support
 set mouse=a
-
-" Enable clipboard integration (requires Vim to be compiled with +clipboard)
-set clipboard=unnamedplus
 
 " Enable incremental search
 set incsearch
@@ -62,6 +57,11 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 
 " Enable line and column numbers in the status line
 set ruler
+
+" Clipboard Integration
+" Enable system clipboard integration
+set clipboard=unnamedplus
+set clipboard=unnamed
 
 " NERDTree settings (updated mappings)
 nnoremap <C-p> :Files<CR>
@@ -118,14 +118,9 @@ nnoremap gT :bprevious<CR>
 " Close current buffer/tab (Space + w)
 nnoremap <space>w :bd<CR>
 
-" NERDTree settings
-let g:NERDTreeWinSize = 40  " Set NERDTree width to 40 columns
-" Auto resize NERDTree window on vim resize
-autocmd VimResized * if exists('t:NERDTreeBufName') | exe 'vertical resize ' . g:NERDTreeWinSize | endif
+
 
 " Session Management
-" Include buffers, windows, tabs, and global variables in sessions
-set sessionoptions+=buffers,windows,tabpages,globals
 " Create session directory if it doesn't exist
 silent !mkdir -p ~/.vim/sessions
 " Auto-save session when leaving Vim
@@ -143,6 +138,10 @@ nnoremap <Leader>ss :mksession! ~/.vim/sessions/last.vim<CR>
 nnoremap <Leader>sl :source ~/.vim/sessions/last.vim<CR>
 nnoremap S :source ~/.vim/sessions/last.vim<CR>
 
+" NERDTree settings
+let g:NERDTreeWinSize = 40  " Set NERDTree width to 40 columns
+" Auto resize NERDTree window on vim resize
+autocmd VimResized * if exists('t:NERDTreeBufName') | exe 'vertical resize ' . g:NERDTreeWinSize | endif
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -162,6 +161,35 @@ vmap <C-_> <plug>NERDCommenterToggle
 nmap <C-/> <plug>NERDCommenterToggle
 vmap <C-/> <plug>NERDCommenterToggle
 
+
+
+" ALE (Asynchronous Lint Engine) Configuration
+" Enable ALE
+let g:ale_enabled = 1
+
+" Auto-import settings
+" Map Ctrl+Space to trigger completion
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use Tab for trigger completion and navigate
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" Auto import on completion confirm
+let g:ale_completion_autoimport = 1
+let g:ale_completion_tsserver_autoimport = 1
+
+let g:VM_maps = {}
+let g:VM_maps['Find Under'] = '<C-d>'  " Map Ctrl+D for selecting occurrences
+let g:VM_maps['Find Subword Under'] = '<C-d>'
+
+
 call plug#begin('~/.vim/plugged')
   " Add your desired plugins here
   Plug '907th/vim-auto-save'
@@ -177,6 +205,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'tpope/vim-fugitive'
+  Plug 'dense-analysis/ale'  
+  Plug 'mg979/vim-visual-multi'  " Multiple cursors plugin
   
   " Git integration
   Plug 'lewis6991/gitsigns.nvim'
