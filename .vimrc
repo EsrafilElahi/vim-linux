@@ -118,7 +118,10 @@ nnoremap gT :bprevious<CR>
 " Close current buffer/tab (Space + w)
 nnoremap <space>w :bd<CR>
 
-
+" NERDTree settings
+let g:NERDTreeWinSize = 40  " Set NERDTree width to 40 columns
+" Auto resize NERDTree window on vim resize
+autocmd VimResized * if exists('t:NERDTreeBufName') | exe 'vertical resize ' . g:NERDTreeWinSize | endif
 
 " Session Management
 " Include buffers, windows, tabs, and global variables in sessions
