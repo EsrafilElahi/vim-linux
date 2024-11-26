@@ -24,6 +24,7 @@ ctrl + / ---> comment code
 gt ---> go to next buffer
 gT ---> go to prev buffer
 space + w ---> close current tab
+shift + l ---> load buffers
 
 viw ---> select the word , even from middle of word or start of word or end of word
 p ---> paste it
