@@ -34,6 +34,8 @@ p ---> paste it
 ctrl + e ---> scroll down
 ctrl + y ---> scroll up
 
+ctrl + d ---> find similar word and select it
+
 ===== jump definition =====
 nnoremap gd :YcmCompleter GoTo<CR>
 nnoremap gd :call CocActionAsync('jumpDefinition')<CR>
