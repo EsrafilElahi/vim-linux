@@ -21,6 +21,9 @@ ctrl+^ ---> change inner tab vim
 
 ctrl + / ---> comment code
 
+gt ---> go to next tab
+gT ---> go to prev tab
+
 viw ---> select the word , even from middle of word or start of word or end of word
 p ---> paste it
 
