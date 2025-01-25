@@ -124,3 +124,9 @@ divide() {
 
 divide 10 2   # Successful division
 divide 10 0   # Error handling
+
+######## tip ########
+# automatically whitespace key (or space)
+TXT = "this is a test text"
+awk '{print $2}' ---> is
+awk '{print $4}' ---> test
