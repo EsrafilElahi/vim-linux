@@ -1,4 +1,4 @@
-# see process that 5000 port
+# see process that 5000 port 
 lsof -t -i:5000
 
 # see process that 3000 port
